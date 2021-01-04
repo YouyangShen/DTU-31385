@@ -1,0 +1,2 @@
+followline "bl" @v0.5:($drivendist>1.2)
+stop

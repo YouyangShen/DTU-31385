@@ -1,0 +1,8 @@
+drive @v 0.5:($drivendist>1)
+turn 90
+drive @v 0.3:($drivendist>0.3)
+turn 90
+drive @v 0.5:($drivendist>1)
+turn 90
+drive @v 0.3:($drivendist>0.3)
+stop
