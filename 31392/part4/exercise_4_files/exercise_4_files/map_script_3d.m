@@ -25,9 +25,21 @@ for i = 1:(length(wall) - 3)
     
 end
 
+E = [1 1 1];
+F = [2 1 1];
+G = [3 1 1];
+H = [4 1 1];
+A = [1 5 1];
+B = [2 5 1];
+C = [3 5 1];
+D = [4 5 1];
+
 % Define the starting and end position
-start = wall(length(wall) - 1, :);
-end_ = wall(length(wall), :);
+% start = wall(length(wall) - 1, :);
+% end_ = wall(length(wall), :);
+start = F ; 
+end_ = B ;
+
 
 % Make sure the start and end is not an obstacle
 map(start(1), start(2), start(3)) = 0;
@@ -100,5 +112,6 @@ route_scaled(:,2) = (route_scaled(:,2) - 1) * y_scale + y_offset;
 route_scaled(:,3) = (route_scaled(:,3) - 1) * z_scale + z_offset;
 
 % Print the scaled route
+land = route_scaled(end,:)-[0 0 z_offset];
+route_scaled = [route_scaled;land];
 route_scaled
-
